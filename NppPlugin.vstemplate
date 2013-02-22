@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<VSTemplate xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Version="2.0.0" Type="Project">
+  <TemplateData>
+    <Name>Notepad++ Plugin 2.0</Name>
+    <Description>Classlibrary, ready to get loaded into N++</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MyNppPlugin</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>NppPlugin.ico</Icon>
+    <CreateInPlace>true</CreateInPlace>
+    <BuildOnLoad>false</BuildOnLoad>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$projectname$.csproj" File="$projectname$.csproj" ReplaceParameters="true"> 
+        <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.csproj">$projectname$.csproj</ProjectItem>
+        <Folder Name="DllExport" TargetFolderName="DllExport">
+            <ProjectItem ReplaceParameters="true" TargetFileName="DllExportAttribute.cs">DllExportAttribute.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Mono.Cecil.dll">Mono.Cecil.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppPlugin.DllExport.dll">NppPlugin.DllExport.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppPlugin.DllExport.MSBuild.dll">NppPlugin.DllExport.MSBuild.dll</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppPlugin.DllExport.targets">NppPlugin.DllExport.targets</ProjectItem>
+        </Folder>
+        <Folder Name="NppPluginNET" TargetFolderName="NppPluginNET">
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppHelper.cs">NppHelper.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="NppPluginForm.cs">NppPluginForm.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppPluginNETBase.cs">NppPluginNETBase.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppPluginNETEventbus.cs">NppPluginNETEventbus.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NppPluginNETHelper.cs">NppPluginNETHelper.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="PluginMainBase.cs">PluginMainBase.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="UnmanagedExports.cs">UnmanagedExports.cs</ProjectItem>
+        </Folder>
+        <Folder Name="Properties" TargetFolderName="Properties">
+            <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="Resources.Designer.cs">Resources.Designer.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Resources.resx">Resources.resx</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="star.png">star.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="star_bmp.bmp">star_bmp.bmp</ProjectItem>
+        </Folder>
+        <Folder Name="Scitilla" TargetFolderName="Scitilla">
+            <ProjectItem ReplaceParameters="false" TargetFileName="CharacterRange.cs">CharacterRange.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Constants.cs">Constants.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NativeMethods.cs">NativeMethods.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="NativeMethods.Scintilla.cs">NativeMethods.Scintilla.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="PrintRectangle.cs">PrintRectangle.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="RangeToFormat.cs">RangeToFormat.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="Scintilla.cs">Scintilla.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="TextRange.cs">TextRange.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="TextToFind.cs">TextToFind.cs</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="VOID.cs">VOID.cs</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="frmMyDlg.cs">frmMyDlg.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="frmMyDlg.Designer.cs">frmMyDlg.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Main.cs">Main.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
